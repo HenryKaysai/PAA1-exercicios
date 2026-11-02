@@ -75,4 +75,3 @@ Cada grupo desconectado é tratado de forma independente pelo laço externo, ent
 
 > *(Adicione o print do Beecrowd mostrando "Accepted" abaixo)*
 ![](image.png)
-![Accepted no Beecrowd](accepted.png)
