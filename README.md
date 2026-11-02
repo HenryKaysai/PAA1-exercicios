@@ -11,8 +11,8 @@
 
 | Campo | Valor |
 |---|---|
-| **Nome completo** | `<seu nome aqui>` |
-| **Cartão UFRGS** | `<000000000>` |
+| **Nome completo** | `Henrique Macedo Frandoloso` |
+| **Cartão UFRGS** | `00588538` |
 | **Turma** | Turma B |
 
 ---
