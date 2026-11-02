@@ -57,7 +57,7 @@ Este repositório é um **portfólio de exercícios** resolvidos ao longo do sem
 
 | # | ID | Problema | Dificuldade | Tópico | Status |
 |---|---|---|---|---|---|
-| 1 | 1979 | [Salas Separadas](exercicios/001979-salas-separadas/README.md) | — | — | 🔄 |
+| 1 | 1979 | [Salas Separadas](exercicios/001979-salas-separadas/README.md) | Fácil porém Rust kk | Grafos / Bipartido (BFS) |✅|
 | 2 | 1082 | [Componentes Conexos](exercicios/001082-componentes-conexos/README.md) | — | — | 🔄 |
 | 3 | 1766 | [O Elfo das Trevas](exercicios/001766-o-elfo-das-trevas/README.md) | — | — | ⬜ |
 | 4 | 1931 | [Mania de Par](exercicios/001931-mania-de-par/README.md) | — | — | ⬜ |
