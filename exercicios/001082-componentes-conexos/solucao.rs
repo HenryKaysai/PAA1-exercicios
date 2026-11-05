@@ -30,16 +30,61 @@ existe de a a b significa que existe caminho de b para a.
 */
 
 use std::collections::VecDeque;
-use std::io::{self, BufRead};
+use std::io::{self, Read};
 
 fn main() {
-    let stdin = io::stdin();
-    let mut linhas = stdin.lock().lines();
+    let mut entrada = String::new();
+    io::stdin().read_to_string(&mut entrada).unwrap();
+    let mut tokens = entrada.split_whitespace();
+    let n: usize = tokens.next().unwrap().parse().unwrap();
 
-    loop {
-        let n: usize = linhas.next().unwrap().unwrap().trim().parse().unwrap();
-        if n == '\n' {
-            break;
+    for i in 1..=n {
+        let v: usize = tokens.next().unwrap().parse().unwrap();
+        let a: usize = tokens.next().unwrap().parse().unwrap();
+        let mut lista: Vec<Vec<usize>> = vec![Vec::new(); v];
+        let mut visitado = vec![false; v];
+
+        for _ in 0..a {
+            let x: &str = tokens.next().unwrap();
+            let y: &str = tokens.next().unwrap();
+
+            let idx: usize = (x.as_bytes()[0] - b'a') as usize;
+            let idy: usize = (y.as_bytes()[0] - b'a') as usize;
+
+            lista[idx].push(idy);
+            lista[idy].push(idx);
         }
+        println!("Case #{}:", i);
+        let mut componentes: usize = 0;
+
+        for s in 0..v {
+            if visitado[s] {
+                continue;
+            }
+            componentes += 1;
+            let mut componente: Vec<usize> = Vec::new();
+            let mut fila: VecDeque<usize> = VecDeque::new();
+
+            visitado[s] = true;
+            fila.push_back(s);
+
+            while let Some(atual) = fila.pop_front() {
+                componente.push(atual);
+                for &vizinho in &lista[atual] {
+                    if !visitado[vizinho] {
+                        visitado[vizinho] = true;
+                        fila.push_back(vizinho);
+                    }
+                }
+            }
+            componente.sort();
+
+            for &vertice in &componente {
+                let letra: char = (vertice as u8 + b'a') as char;
+                print!("{},", letra);
+            }
+            println!();
+        }
+        println!("{} connected components\n", componentes);
     }
 }
