@@ -36,13 +36,13 @@ fn main() {
     let mut entrada = String::new();
     io::stdin().read_to_string(&mut entrada).unwrap();
     let mut tokens = entrada.split_whitespace();
-    let n: usize = tokens.next().unwrap().parse().unwrap();
 
-    for i in 1..=n {
+    for i in 1..=tokens.next().unwrap().parse().unwrap() {
         let v: usize = tokens.next().unwrap().parse().unwrap();
         let a: usize = tokens.next().unwrap().parse().unwrap();
         let mut lista: Vec<Vec<usize>> = vec![Vec::new(); v];
         let mut visitado = vec![false; v];
+
 
         for _ in 0..a {
             let x: &str = tokens.next().unwrap();
