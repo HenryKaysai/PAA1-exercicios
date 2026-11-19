@@ -59,8 +59,8 @@ Este repositório é um **portfólio de exercícios** resolvidos ao longo do sem
 | --- | ---- | ---------------------------------------------------------------------- | ------------------- | ---------------------------------- | ------ |
 | 1   | 1979 | [Salas Separadas](exercicios/001979-salas-separadas/README.md)         | Fácil porém Rust kk | Grafos / Bipartido (BFS)           | ✅      |
 | 2   | 1082 | [Componentes Conexos](exercicios/001082-componentes-conexos/README.md) | Médio, pois Rust    | Grafos / Componentes Conexos (BFS) | ✅      |
-| 3   | 1766 | [O Elfo das Trevas](exercicios/001766-o-elfo-das-trevas/README.md)     | —                   | —                                  | 🔄      |
-| 4   | 1931 | [Mania de Par](exercicios/001931-mania-de-par/README.md)               | —                   | —                                  | ⬜      |
+| 3   | 1766 | [O Elfo das Trevas](exercicios/001766-o-elfo-das-trevas/README.md)     | Fácil               | Ordenação (sort com desempates)    | ✅      |
+| 4   | 1931 | [Mania de Par](exercicios/001931-mania-de-par/README.md)               | —                   | —                                  | 🔄      |
 | 5   | 1152 | [Estradas Escuras](exercicios/001152-estradas-escuras/README.md)       | —                   | —                                  | ⬜      |
 | 6   | 1799 | [O Rato no Labirinto](exercicios/001799-o-rato-no-labirinto/README.md) | —                   | —                                  | ⬜      |
 | 7   | 1128 | [Ir e Vir](exercicios/001128-ir-e-vir/README.md)                       | —                   | —                                  | ⬜      |
