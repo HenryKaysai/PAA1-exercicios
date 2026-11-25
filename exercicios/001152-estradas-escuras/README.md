@@ -63,4 +63,4 @@ As estradas que ficam acesas formam uma Árvore Geradora Mínima. Usei Kruskal.
 
 ## 📸 Evidência de Submissão
 
-![Accepted no Beecrowd](accepted.png)
+[[accepted.png]]
