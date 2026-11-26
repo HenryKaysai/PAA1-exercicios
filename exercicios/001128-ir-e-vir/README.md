@@ -1,24 +1,31 @@
 # Problema 1128: Ir e Vir
 
-**Problema:** [Ir e Vir](https://judge.beecrowd.com/pt/problems/view/1128)  
+Problema: [Ir e Vir](https://judge.beecrowd.com/pt/problems/view/1128)
 
 ---
 
 ## 📌 Descrição do Problema
 
-> *(Descreva brevemente o problema com suas próprias palavras — não copie o enunciado.)*
+A cidade tem N cruzamentos e M ruas, umas de mão única e outras de mão dupla. Tem que dizer se dá pra ir de qualquer cruzamento pra qualquer outro.
 
 ---
 
 ## 💡 Abordagem
 
-> *(Explique a ideia central da sua solução. O que você percebeu sobre o problema? Qual estratégia usou? Por que ela funciona?)*
+Ver se o grafo é fortemente conexo
+
+- uma BFS a partir do 1 no grafo normal (ida), pra ver se o 1 chega em todo mundo
+- uma BFS a partir do 1 no grafo com as ruas invertidas (volta), pra ver se todo mundo chega no 1
+
+Se as duas passam, qualquer cruzamento chega em qualquer outro passando pelo 1. Rua de mão dupla (P = 2) entra nos dois sentidos
+
+A leitura usa a função next, igual aos outros
 
 ---
 
 ## ❌ O Que Não Funcionou
 
-> *(Documente tentativas anteriores que falharam ou abordagens que você considerou mas descartou. Qual foi o erro? TLE? WA? Lógica errada?)*
+A primeira ideia foi rodar uma BFS de cada vértice e ver se todos chegam em todos, muito lento, então troquei pelas duas BFS
 
 ---
 
@@ -26,28 +33,32 @@
 
 ### Tempo
 
-> *(Justifique usando notação assintótica. Identifique os loops, recursões ou operações dominantes.)*
+Montar os dois grafos é O(M) e cada BFS é O(N + M)
 
+Total: O(N + M) por caso
 
 ### Espaço
 
-> *(Justifique usando notação assintótica. Considere estruturas de dados usadas, recursão, etc.)*
+Os dois grafos e o vetor de visitados: O(N + M)
+
+---
 
 ## 🔍 Corretude
 
-> *(Argumente brevemente por que sua solução é correta. Pode ser informal, mas deve ter lógica.)*
+Se o 1 chega em todos e todos chegam no 1, então de qualquer u dá pra ir até o 1 e do 1 até qualquer v logo, o grafo é fortemente conexo
+
+Se alguma BFS não chega num vértice x, ou o 1 não chega em x ou x não chega no 1. Aí o grafo não é fortemente conexo
 
 ---
 
 ## 🚀 O Que Poderia ser Melhorado
 
-> *(Reflita: existe solução mais eficiente? O código poderia ser mais legível? Há casos extremos mal tratados?)*
+Usar Kosaraju ou Tarjan, que também dizem quantas componentes fortemente conexas existem
 
+O grafo volta é montado mesmo quando a primeira BFS já falhou
 
 ---
 
 ## 📸 Evidência de Submissão
-
-> *(Adicione o print do Beecrowd mostrando "Accepted" abaixo)*
 
 ![Accepted no Beecrowd](accepted.png)

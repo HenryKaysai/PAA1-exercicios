@@ -1,0 +1,5 @@
+5 4
+Entrada 1
+1 *
+* 2
+2 Saida
