@@ -5,17 +5,6 @@
 **Semestre:** 2026/2  
 **Professor:** Lucas Nunes Alegre
 
----
-
-## 👤 Identificação do Aluno
-
-| Campo | Valor |
-|---|---|
-| **Nome completo** | `Henrique Macedo Frandoloso` |
-| **Cartão UFRGS** | `00588538` |
-| **Turma** | Turma B |
-
----
 
 ## 📋 Sobre o Trabalho
 
